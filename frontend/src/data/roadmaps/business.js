@@ -1,0 +1,325 @@
+import { SOURCES, exam, roadmap, stage } from './shared'
+
+export const businessRoadmaps = [
+  roadmap({
+    id: 'chartered-accountant',
+    title: 'Chartered Accountant',
+    categoryId: 'business',
+    intro:
+      'Chartered accountants work in audit, taxation, financial reporting, advisory, and compliance. The ICAI qualification combines examinations, practical training, and professional membership.',
+    duration: 'Several years after Class 12, depending on examination attempts and the current ICAI training requirements.',
+    stages: [
+      stage(
+        'Build commerce and quantitative foundations',
+        'Develop comfort with accounts, mathematics, economics, and business studies where available. Accuracy, ethics, and written communication matter from the start.',
+        'Class 10',
+        ['Mathematics', 'Accounts', 'Economics'],
+      ),
+      stage(
+        'Complete Class 11–12 and register for the foundation route',
+        'Many students begin the ICAI route after Class 12 through the Foundation course. Direct-entry routes exist for eligible graduates, so check the current ICAI scheme before choosing.',
+        'Class 12',
+        ['Commerce subjects', 'ICAI registration', 'Foundation syllabus'],
+      ),
+      stage(
+        'Clear the Intermediate level',
+        'Study accounting, law, taxation, cost accounting, audit, and financial management. The current scheme allows examinations in groups and may include integrated practical training requirements.',
+        'Varies with attempts',
+        ['CA Intermediate', 'Taxation', 'Audit'],
+      ),
+      stage(
+        'Complete practical training and the Final examination',
+        'Practical training under a registered chartered accountant is a core part of the qualification, alongside the Final level. Confirm current training duration, leave, and registration rules with ICAI.',
+        'Several years, depending on route',
+        ['Articleship or practical training', 'CA Final', 'Professional ethics'],
+      ),
+      stage(
+        'Become a member and choose a practice area',
+        'After completing the required examinations and training, apply for ICAI membership. Careers can develop in audit, tax, industry finance, consulting, forensics, or independent practice.',
+        'After qualification',
+        ['ICAI membership', 'Practice or industry', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Accounting', 'Business law', 'Taxation', 'Economics', 'Audit'],
+    exams: [
+      exam('CA Foundation', 'Entry-level ICAI examination for many Class 12 students; direct-entry routes also exist.', SOURCES.icai),
+      exam('CA Intermediate and CA Final', 'Stages of the ICAI qualification; syllabus, group rules, and training requirements change over time.', SOURCES.icai),
+    ],
+    qualifications: [
+      'Class 12 for the Foundation route, subject to current ICAI registration rules.',
+      'Eligible graduates may use a direct-entry route to Intermediate; check current conditions.',
+      'Completion of prescribed practical training, Final examinations, and membership requirements.',
+    ],
+    skills: ['Financial reporting', 'Taxation', 'Audit', 'Ethics', 'Attention to detail'],
+    practical: [
+      'Complete practical training with proper registration and supervision.',
+      'Practise reconciliations, documentation, and professional scepticism.',
+      'Follow ICAI announcements for syllabus, examination, and training changes.',
+    ],
+    licensing: ['ICAI membership is required to use the Chartered Accountant designation and to practise as a chartered accountant in the regulated sense.'],
+    entryRoutes: [
+      'Foundation route after Class 12, followed by Intermediate, training, and Final.',
+      'Direct entry to Intermediate for eligible graduates under current ICAI rules.',
+      'Later career movement into industry finance, consulting, or specialist advisory.',
+    ],
+    alternatives: ['Company Secretary', 'Cost and Management Accountant', 'Financial Analyst', 'Auditor'],
+    sources: [SOURCES.icai],
+    note: 'Do not rely on old articles about attempt limits, training duration, or direct-entry marks. Check the current ICAI scheme and student announcements.',
+  }),
+  roadmap({
+    id: 'company-secretary',
+    title: 'Company Secretary',
+    categoryId: 'business',
+    intro:
+      'Company secretaries advise on corporate governance, compliance, board processes, and company law. The ICSI qualification combines structured examinations, practical training, and membership.',
+    duration: 'Several years after Class 12, depending on examination attempts and current ICSI training rules.',
+    stages: [
+      stage(
+        'Build law, commerce, and communication foundations',
+        'Develop reading, writing, business awareness, and quantitative skills. Company secretarial work depends on precise interpretation and clear records.',
+        'Class 10',
+        ['Business studies', 'English', 'Mathematics'],
+      ),
+      stage(
+        'Complete Class 11–12 and begin the ICSI route',
+        'The CS Executive Entrance Test (CSEET) is a common entry point after Class 12. Some eligible graduates may have other entry routes; confirm with ICSI.',
+        'Class 12',
+        ['CSEET preparation', 'Business law', 'Communication'],
+      ),
+      stage(
+        'Clear the Executive programme',
+        'Study company law, securities law, governance, accounting, tax, and management. Examinations can usually be attempted in modules under the current scheme.',
+        'Varies with attempts',
+        ['CS Executive', 'Corporate law', 'Governance'],
+      ),
+      stage(
+        'Complete the Professional programme and practical training',
+        'The Professional level deepens governance, compliance, and advisory knowledge. Practical training requirements must be completed as prescribed by ICSI.',
+        'Several years, depending on route',
+        ['CS Professional', 'Practical training', 'Board processes'],
+      ),
+      stage(
+        'Become a member and choose a setting',
+        'Apply for ICSI membership after meeting examination and training requirements. Work in company secretarial practice, listed companies, compliance, governance, or advisory.',
+        'After qualification',
+        ['ICSI membership', 'Compliance', 'Governance'],
+      ),
+    ],
+    subjects: ['Company law', 'Securities law', 'Accounting', 'Taxation', 'Governance'],
+    exams: [
+      exam('CSEET', 'Common entrance test for the ICSI company secretary route; check current exemptions and eligibility.', SOURCES.icsi),
+      exam('CS Executive and Professional', 'Stages of the ICSI qualification; module and training rules change over time.', SOURCES.icsi),
+    ],
+    qualifications: [
+      'Class 12 for the CSEET route, subject to current ICSI rules.',
+      'Eligible graduates may have alternative entry conditions; verify before registering.',
+      'Completion of prescribed examinations, practical training, and membership requirements.',
+    ],
+    skills: ['Corporate law', 'Compliance', 'Board communication', 'Record keeping', 'Ethics'],
+    practical: [
+      'Complete practical training with proper registration and supervision.',
+      'Study real annual reports and governance disclosures with care.',
+      'Follow ICSI updates for syllabus and training requirements.',
+    ],
+    licensing: ['ICSI membership is required to use the Company Secretary designation and to provide regulated company secretarial services.'],
+    entryRoutes: [
+      'CSEET after Class 12, followed by Executive, Professional, and training.',
+      'Eligible graduate entry routes under current ICSI rules.',
+      'Legal, commerce, or compliance roles followed by professional qualification.',
+    ],
+    alternatives: ['Chartered Accountant', 'Lawyer', 'Compliance Officer', 'Financial Analyst'],
+    sources: [SOURCES.icsi],
+  }),
+  roadmap({
+    id: 'financial-analyst',
+    title: 'Financial Analyst',
+    categoryId: 'business',
+    intro:
+      'Financial analysts study financial statements, markets, and business performance to support investment, lending, planning, or corporate decisions. They combine quantitative analysis with clear communication.',
+    duration: 'A three- or four-year bachelor’s degree after Class 12, often followed by internships, professional study, or a master’s degree.',
+    stages: [
+      stage(
+        'Build quantitative and business foundations',
+        'Study mathematics, economics, accounts, and business studies where available. Learn to read numbers critically rather than only calculate them.',
+        'Class 10',
+        ['Mathematics', 'Economics', 'Accounts'],
+      ),
+      stage(
+        'Complete Class 11–12',
+        'Commerce, mathematics, or economics combinations can be useful, but several streams can lead to finance degrees. Check degree prerequisites.',
+        '2 years',
+        ['Commerce or science', 'Economics', 'Statistics'],
+      ),
+      stage(
+        'Complete a relevant bachelor’s degree',
+        'Finance, economics, accounting, business, mathematics, or engineering can lead here. Build spreadsheet, statistics, and financial-statement skills alongside coursework.',
+        '3–4 years',
+        ['Finance or economics', 'Accounting', 'Statistics'],
+      ),
+      stage(
+        'Build analytical evidence',
+        'Complete internships, valuation projects, or investment research. The CFA Program may be useful for some investment roles but is not a universal requirement.',
+        'During study',
+        ['Excel', 'Valuation', 'Research reports'],
+      ),
+      stage(
+        'Enter analysis and develop a specialty',
+        'Start in equity research, credit analysis, corporate finance, planning, or risk. Professional qualifications and postgraduate study can support progression.',
+        'After graduation',
+        ['Research or corporate finance', 'CFA or MBA', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Economics', 'Accounting', 'Statistics', 'Business'],
+    exams: [
+      exam('University or CUET admissions', 'Bachelor’s admission routes vary by institution and programme.'),
+      exam('CFA Program', 'A multi-level professional programme often used in investment analysis; it is not a statutory licence.', SOURCES.cfa),
+    ],
+    qualifications: [
+      'A bachelor’s degree in finance, economics, accounting, business, or a quantitative field is common.',
+      'CFA, MBA, or other professional study can help particular roles but is not mandatory for every analyst position.',
+      'Practical financial modelling and research evidence are often important in hiring.',
+    ],
+    skills: ['Financial statements', 'Excel modelling', 'Valuation', 'Research', 'Communication'],
+    practical: [
+      'Analyse a listed company using its annual reports and explain the assumptions.',
+      'Build a simple valuation model and test how sensitive it is to inputs.',
+      'Present a recommendation with risks and uncertainty, not only a target number.',
+    ],
+    licensing: ['Most financial analyst roles do not require a statutory licence. Some regulated advisory or dealing roles have separate certification requirements.'],
+    entryRoutes: [
+      'Finance or economics degree followed by analyst internships.',
+      'Professional qualification or MBA after an unrelated bachelor’s degree.',
+      'Accounting, banking, or operations experience moving into analysis.',
+    ],
+    alternatives: ['Chartered Accountant', 'Business Analyst', 'Investment Banker', 'Economist'],
+    sources: [SOURCES.cfa],
+    note: 'The CFA charter is a professional credential, not a government licence. Verify the requirements of the specific role and employer.',
+  }),
+  roadmap({
+    id: 'business-analyst',
+    title: 'Business Analyst',
+    categoryId: 'business',
+    intro:
+      'Business analysts study processes, systems, and stakeholder needs to recommend practical improvements. They connect business goals with technology, data, and organisational change.',
+    duration: 'A three- or four-year bachelor’s degree after Class 12, followed by applied projects or specialist training.',
+    stages: [
+      stage(
+        'Build communication and analytical foundations',
+        'Practise clear writing, questioning, spreadsheet work, and structured problem solving. Notice how organisations and processes work around you.',
+        'School years',
+        ['Communication', 'Mathematics', 'Business awareness'],
+      ),
+      stage(
+        'Complete Class 11–12',
+        'Commerce, science, or humanities streams can all lead to relevant degrees. Choose subjects that develop both quantitative and communication skills.',
+        '2 years',
+        ['Economics', 'Mathematics', 'English'],
+      ),
+      stage(
+        'Complete a relevant bachelor’s degree',
+        'Business, economics, information systems, computer science, engineering, or another analytical degree can work. Learn basic data, process, and project concepts.',
+        '3–4 years',
+        ['Business or computing', 'Statistics', 'Process analysis'],
+      ),
+      stage(
+        'Build evidence of analysis and facilitation',
+        'Complete projects involving requirements, process mapping, user interviews, data analysis, or testing. Certifications can supplement practical evidence but are not a substitute for it.',
+        'During study',
+        ['Requirement gathering', 'Process maps', 'Stakeholder work'],
+      ),
+      stage(
+        'Enter a business analysis or product role',
+        'Start in analysis, operations, product, consulting, or systems roles. Grow into product ownership, enterprise analysis, data product work, or consulting.',
+        'After graduation',
+        ['Analysis', 'Product or consulting', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Business', 'Economics', 'Statistics', 'Information systems', 'Communication'],
+    exams: [
+      exam('University or CUET admissions', 'Bachelor’s admission routes vary by programme and institution.'),
+    ],
+    qualifications: [
+      'A bachelor’s degree in business, economics, computing, engineering, or a related field is common.',
+      'Professional business-analysis certifications may help some employers but are not universally required.',
+      'Demonstrated stakeholder and problem-solving work matters in entry hiring.',
+    ],
+    skills: ['Requirement gathering', 'Process mapping', 'Data literacy', 'Facilitation', 'Clear writing'],
+    practical: [
+      'Map a real process and identify evidence-based improvement options.',
+      'Practise interviewing stakeholders and writing unambiguous requirements.',
+      'Learn basic SQL and spreadsheets so you can test your own assumptions.',
+    ],
+    licensing: ['No statutory licence is generally required.'],
+    entryRoutes: [
+      'Business or computing degree followed by analyst or product work.',
+      'Operations or support experience moving into process and systems analysis.',
+      'Consulting or project role with growing requirements responsibility.',
+    ],
+    alternatives: ['Data Analyst', 'Product Manager', 'Financial Analyst', 'Management Consultant'],
+    sources: [],
+  }),
+  roadmap({
+    id: 'entrepreneur',
+    title: 'Entrepreneur',
+    categoryId: 'business',
+    intro:
+      'Entrepreneurs identify problems, build products or services, and take responsibility for making an organisation viable. There is no single qualification, but finance, law, customer understanding, and execution all matter.',
+    duration: 'Highly variable. Some founders start after school or college; others build experience first and start later.',
+    stages: [
+      stage(
+        'Develop curiosity and practical skills',
+        'Observe problems around you, learn basic money management, and practise selling, writing, and teamwork. Small projects teach more than waiting for a perfect idea.',
+        'School years',
+        ['Communication', 'Numeracy', 'Curiosity'],
+      ),
+      stage(
+        'Build a useful knowledge base',
+        'Study a field related to your interests, or gain technical and commercial experience through work. Business, design, computing, law, and finance can all be useful, but none is mandatory.',
+        'After Class 12 or through work',
+        ['Domain knowledge', 'Finance basics', 'Customer understanding'],
+      ),
+      stage(
+        'Test a small solution with real users',
+        'Interview potential customers, build a simple prototype or service, and try to get a real transaction. Measure evidence instead of relying only on enthusiasm.',
+        'Months to years',
+        ['Customer discovery', 'Prototype', 'Early sales'],
+      ),
+      stage(
+        'Establish the legal and financial basics',
+        'Choose an appropriate business structure, understand tax and compliance obligations, protect intellectual property where relevant, and keep reliable accounts. Get qualified advice for your situation.',
+        'Before or during launch',
+        ['Registration', 'Tax and compliance', 'Accounts'],
+      ),
+      stage(
+        'Grow, adapt, or exit',
+        'Build a team, improve unit economics, and decide whether to grow, pivot, or close. Entrepreneurship involves uncertainty; learning from evidence and managing risk are core skills.',
+        'Ongoing',
+        ['Team building', 'Financing', 'Operations'],
+      ),
+    ],
+    subjects: ['Business', 'Economics', 'Accounting', 'Law', 'Communication'],
+    exams: [
+      exam('No single mandatory entrance examination', 'Formal study can help, but entrepreneurship is not regulated by one qualifying examination.'),
+    ],
+    qualifications: [
+      'No specific degree or licence is required to start most businesses.',
+      'Regulated activities may require permits, registrations, or professional qualifications.',
+      'Business, technical, legal, or finance study can be useful but does not replace customer evidence.',
+    ],
+    skills: ['Customer discovery', 'Sales', 'Financial literacy', 'Resilience', 'Execution'],
+    practical: [
+      'Try to sell a small service or product before investing heavily.',
+      'Track cash flow, costs, and customer feedback from the beginning.',
+      'Seek experienced mentors and qualified legal or tax advice for regulated decisions.',
+    ],
+    licensing: ['Requirements depend on the business activity. Some sectors require registrations, permits, or professional licences.'],
+    entryRoutes: [
+      'Start a small venture after testing demand.',
+      'Build experience in an industry before founding a business.',
+      'Join or co-found a team where your skills complement others.',
+    ],
+    alternatives: ['Business Analyst', 'Product Manager', 'Financial Analyst', 'Management Consultant'],
+    sources: [],
+    note: 'Entrepreneurship is not a guaranteed-income path. Validate demand, understand compliance, and avoid risking money you cannot afford to lose.',
+  }),
+]

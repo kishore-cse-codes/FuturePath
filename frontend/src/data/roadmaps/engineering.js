@@ -1,0 +1,388 @@
+import { SOURCES, exam, roadmap, stage } from './shared'
+
+export const engineeringRoadmaps = [
+  roadmap({
+    id: 'mechanical-engineer',
+    title: 'Mechanical Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Mechanical engineers design, analyse, test, and maintain machines and mechanical systems. Their work can span manufacturing, energy, transport, robotics, HVAC, and product development.',
+    duration: 'A four-year B.Tech/B.E. after Class 12 is common; diploma and lateral-entry routes also exist.',
+    stages: [
+      stage(
+        'Build mathematics and physical-science foundations',
+        'Develop strong mathematics, physics, and chemistry fundamentals. Practical tinkering, drawing, and computer use can strengthen early understanding.',
+        'Class 10',
+        ['Mathematics', 'Physics', 'Chemistry'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry are the standard preparation for engineering entrance routes. Check specific subject rules for each institution.',
+        '2 years',
+        ['MPC', 'Problem solving', 'Technical drawing'],
+      ),
+      stage(
+        'Complete an engineering degree',
+        'Study mechanical engineering at a recognised institution. Coursework includes mechanics, thermodynamics, materials, manufacturing, design, and control.',
+        '4 years',
+        ['B.Tech/B.E.', 'JEE or state CET', 'Labs and design projects'],
+      ),
+      stage(
+        'Build applied engineering evidence',
+        'Use internships, machine-shop experience, CAD projects, and team competitions to connect theory with safe practice. Document calculations and design decisions.',
+        'During study',
+        ['CAD', 'Manufacturing', 'Internships'],
+      ),
+      stage(
+        'Enter industry or postgraduate study',
+        'Start in design, manufacturing, maintenance, quality, energy, or project engineering. GATE or postgraduate study can support specialist and research roles.',
+        'After graduation',
+        ['Design or operations', 'Specialisation', 'Professional growth'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Thermodynamics', 'Materials'],
+    exams: [
+      exam('JEE (Main)', 'Used for admission to participating national institutes and some state counselling routes.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Many states use their own entrance and counselling systems.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in mechanical engineering or a closely related branch is common.',
+      'Diploma in mechanical engineering can lead to technician or junior engineering roles and lateral entry.',
+      'Postgraduate study or GATE may be relevant for research, specialist design, or some public-sector roles.',
+    ],
+    skills: ['Engineering mechanics', 'CAD', 'Thermodynamics', 'Manufacturing awareness', 'Technical documentation'],
+    practical: [
+      'Complete lab, workshop, and design projects with attention to safety.',
+      'Learn to read drawings and explain calculations behind a design.',
+      'Seek internships in manufacturing, maintenance, or product development.',
+    ],
+    licensing: ['Engineering practice is generally not licensed in the same way as medicine. Some public roles or certifications may have additional requirements.'],
+    entryRoutes: [
+      'B.Tech/B.E. through JEE or state entrance and counselling.',
+      'Diploma followed by technician or junior engineering work and possible lateral entry.',
+      'Postgraduate specialisation after a bachelor’s degree.',
+    ],
+    alternatives: ['Aerospace Engineer', 'Robotics Engineer', 'Civil Engineer', 'Industrial Engineer'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+  roadmap({
+    id: 'civil-engineer',
+    title: 'Civil Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Civil engineers plan, design, build, and maintain infrastructure such as buildings, roads, bridges, water systems, and foundations. Public safety and environmental constraints are central to the work.',
+    duration: 'A four-year B.Tech/B.E. after Class 12 is common; diploma and lateral-entry routes also exist.',
+    stages: [
+      stage(
+        'Build mathematics and science foundations',
+        'Study mathematics, physics, and chemistry, and develop an interest in structures, materials, and public spaces.',
+        'Class 10',
+        ['Mathematics', 'Physics', 'Chemistry'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry are the standard preparation for engineering entrance routes. Confirm subject requirements for the institutions you target.',
+        '2 years',
+        ['MPC', 'Drawing', 'Problem solving'],
+      ),
+      stage(
+        'Complete a civil engineering degree',
+        'Study structural analysis, materials, geotechnics, hydraulics, transportation, surveying, and construction management.',
+        '4 years',
+        ['B.Tech/B.E.', 'JEE or state CET', 'Surveying and design'],
+      ),
+      stage(
+        'Build field and design experience',
+        'Use internships and projects to understand drawings, estimates, site safety, quality checks, and contract realities. Learn to communicate assumptions clearly.',
+        'During study',
+        ['Site visits', 'CAD', 'Estimates'],
+      ),
+      stage(
+        'Enter practice or public infrastructure',
+        'Work in design consultancy, construction, public works, water, transport, or project management. Some roles require professional membership or further qualification.',
+        'After graduation',
+        ['Design', 'Construction', 'Public works'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Mechanics', 'Surveying'],
+    exams: [
+      exam('JEE (Main)', 'One route into engineering degree admission; state tests and other programmes also exist.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Several states use their own admission and counselling processes.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in civil engineering or a closely related branch is common.',
+      'Diploma routes can lead to site and technician roles and lateral entry.',
+      'Public works or consultancy roles may value professional membership or postgraduate study, depending on the post.',
+    ],
+    skills: ['Structural reasoning', 'Surveying', 'CAD', 'Construction safety', 'Estimating'],
+    practical: [
+      'Visit active sites only with proper supervision and safety arrangements.',
+      'Prepare a simple design or estimate with assumptions and checks.',
+      'Study how quality control, contracts, and public accountability affect delivery.',
+    ],
+    licensing: ['Some public works, consultancy, or certification roles may require professional registration or membership. Requirements vary by role and authority.'],
+    entryRoutes: [
+      'Civil engineering degree through JEE or state entrance.',
+      'Diploma plus site experience and possible lateral entry.',
+      'Public infrastructure roles through government engineering recruitment.',
+    ],
+    alternatives: ['Government Engineer', 'Architect', 'Environmental Engineer', 'Urban Planner'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+  roadmap({
+    id: 'electrical-engineer',
+    title: 'Electrical Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Electrical engineers design and maintain systems that generate, transmit, distribute, and use electrical power. They also work on machines, controls, electronics, and safety-critical equipment.',
+    duration: 'A four-year B.Tech/B.E. after Class 12 is common; diploma and lateral-entry routes also exist.',
+    stages: [
+      stage(
+        'Build mathematics and physics foundations',
+        'Develop strong understanding of mathematics, physics, circuits, and safe experimentation. Avoid working with mains electricity without supervision.',
+        'Class 10',
+        ['Mathematics', 'Physics', 'Safety'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry are the standard preparation for electrical engineering entrance routes.',
+        '2 years',
+        ['MPC', 'Circuits basics', 'Problem solving'],
+      ),
+      stage(
+        'Complete an electrical engineering degree',
+        'Study circuit theory, machines, power systems, control, electronics, protection, and measurement. Laboratories are essential for understanding safety and behaviour.',
+        '4 years',
+        ['B.Tech/B.E.', 'JEE or state CET', 'Power systems'],
+      ),
+      stage(
+        'Build supervised practical experience',
+        'Use projects and internships to work with motors, controllers, renewable systems, or power distribution under qualified supervision. Document testing and safety procedures.',
+        'During study',
+        ['Labs', 'Projects', 'Testing'],
+      ),
+      stage(
+        'Enter power, manufacturing, or controls',
+        'Work in utilities, manufacturing, infrastructure, renewable energy, automation, or electronics. Some roles require additional authorisation or public-sector selection.',
+        'After graduation',
+        ['Power sector', 'Automation', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Circuits', 'Control systems'],
+    exams: [
+      exam('JEE (Main)', 'Used for some national institute admissions; state and university routes also exist.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Admission and counselling rules vary by state.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in electrical or electrical and electronics engineering is common.',
+      'Diploma routes can lead to technician and junior engineering roles.',
+      'Some public-sector or safety roles may require additional selection or authorisation.',
+    ],
+    skills: ['Circuit analysis', 'Power systems', 'Control fundamentals', 'Electrical safety', 'Testing'],
+    practical: [
+      'Complete supervised lab work and never experiment with mains power alone.',
+      'Build a small safe project involving sensors, control, or measurement.',
+      'Learn to read protection schemes, drawings, and equipment ratings.',
+    ],
+    licensing: ['Most electrical engineering roles do not require a general professional licence. Certain inspection, public works, or safety roles may require specific authorisation.'],
+    entryRoutes: [
+      'Electrical engineering degree through JEE or state entrance.',
+      'Diploma route into technician or junior engineer roles.',
+      'Public-sector utility or engineering services recruitment after graduation.',
+    ],
+    alternatives: ['Electronics Engineer', 'Mechanical Engineer', 'Government Engineer', 'Renewable Energy Engineer'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+  roadmap({
+    id: 'electronics-engineer',
+    title: 'Electronics Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Electronics engineers design and test circuits, devices, communication systems, embedded products, and electronic control systems. Their work connects hardware, signals, and software.',
+    duration: 'A four-year B.Tech/B.E. after Class 12 is common; diploma and lateral-entry routes also exist.',
+    stages: [
+      stage(
+        'Build physics and mathematics foundations',
+        'Develop understanding of electricity, circuits, mathematics, and careful measurement. Small supervised electronics kits can build intuition safely.',
+        'Class 10',
+        ['Mathematics', 'Physics', 'Measurement'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry are the standard preparation for electronics engineering routes.',
+        '2 years',
+        ['MPC', 'Circuits', 'Problem solving'],
+      ),
+      stage(
+        'Complete an electronics or related degree',
+        'Study analog and digital circuits, signals, microcontrollers, communication, embedded systems, and testing. Laboratories and debugging practice are central.',
+        '4 years',
+        ['B.Tech/B.E.', 'JEE or state CET', 'Embedded systems'],
+      ),
+      stage(
+        'Build and debug working hardware',
+        'Create projects with sensors, microcontrollers, and communication modules. Document schematics, test results, failures, and safety limits.',
+        'During study',
+        ['PCB basics', 'Microcontrollers', 'Testing'],
+      ),
+      stage(
+        'Enter electronics, embedded, or communications work',
+        'Start in hardware design, embedded software, testing, telecom, automation, or semiconductor support. Postgraduate study can support advanced design and research.',
+        'After graduation',
+        ['Hardware', 'Embedded', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Circuits', 'Signals'],
+    exams: [
+      exam('JEE (Main)', 'One admission route; state entrance tests and university admissions also apply.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Eligibility and counselling vary by state.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in electronics, electronics and communication, or a related branch is common.',
+      'Diploma routes can lead to technician and junior engineering work.',
+      'Postgraduate study can support VLSI, communications, embedded, or research roles.',
+    ],
+    skills: ['Circuit design', 'Microcontrollers', 'Signal basics', 'Debugging', 'Technical documentation'],
+    practical: [
+      'Build and test a small embedded project with clear schematics.',
+      'Learn to use a multimeter, oscilloscope, and basic debugging tools safely.',
+      'Compare simulation with measured behaviour and explain differences.',
+    ],
+    licensing: ['Most electronics engineering roles do not require a general professional licence. Radio or safety-related roles may have separate rules.'],
+    entryRoutes: [
+      'Electronics or communication engineering degree.',
+      'Diploma plus technician experience and possible lateral entry.',
+      'Postgraduate specialisation in VLSI, embedded systems, or communications.',
+    ],
+    alternatives: ['Electrical Engineer', 'Robotics Engineer', 'Computer Engineer', 'Network Engineer'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+  roadmap({
+    id: 'aerospace-engineer',
+    title: 'Aerospace Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Aerospace engineers design, test, and support aircraft, spacecraft, propulsion systems, and related technologies. Safety, rigorous analysis, and multidisciplinary teamwork are central.',
+    duration: 'A four-year B.Tech/B.E. in aerospace or a related branch after Class 12 is common, often followed by specialist study.',
+    stages: [
+      stage(
+        'Build strong mathematics and physics foundations',
+        'Develop mechanics, calculus, physics, and careful problem solving. Model aircraft, rocketry clubs, or supervised projects can test interest.',
+        'Class 10',
+        ['Mathematics', 'Physics', 'Mechanics'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry are standard for aerospace engineering entrance routes.',
+        '2 years',
+        ['MPC', 'Calculus', 'Physics'],
+      ),
+      stage(
+        'Complete an aerospace or related degree',
+        'Study aerodynamics, structures, propulsion, flight mechanics, materials, and control. Mechanical or electrical engineering can also lead into aerospace specialisations.',
+        '4 years',
+        ['B.Tech/B.E.', 'Aerospace or mechanical', 'Labs and simulation'],
+      ),
+      stage(
+        'Build analysis and testing experience',
+        'Use projects, internships, and competitions to design, simulate, and test a component or system. Document assumptions, safety limits, and validation.',
+        'During study',
+        ['Simulation', 'Testing', 'Team projects'],
+      ),
+      stage(
+        'Enter aerospace or advanced manufacturing',
+        'Work in aircraft maintenance, design, propulsion, space systems, defence, or research. Postgraduate study may be needed for specialised research and design roles.',
+        'After graduation',
+        ['Design', 'Testing', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Aerodynamics', 'Materials'],
+    exams: [
+      exam('JEE (Main)', 'One route into aerospace or related engineering programmes; state and university routes also exist.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Admission requirements vary by state and institution.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in aerospace, aeronautical, mechanical, or a related branch is common.',
+      'Postgraduate study is common for specialist design and research roles.',
+      'Medical or security requirements may apply to particular employers or defence roles.',
+    ],
+    skills: ['Aerodynamics', 'Structural analysis', 'Simulation', 'Safety reasoning', 'Technical communication'],
+    practical: [
+      'Participate in supervised design-build-test projects or competitions.',
+      'Compare simulation results with experimental data and explain uncertainty.',
+      'Study airworthiness, safety, and quality requirements for the target sector.',
+    ],
+    licensing: ['Aerospace engineering itself is not generally licensed, but aircraft maintenance and airworthiness roles have specific regulatory approvals.'],
+    entryRoutes: [
+      'Aerospace or aeronautical engineering degree.',
+      'Mechanical or electrical engineering followed by aerospace specialisation.',
+      'Postgraduate study or defence technical entry for specialist roles.',
+    ],
+    alternatives: ['Mechanical Engineer', 'Pilot', 'Aircraft Maintenance Engineer', 'Robotics Engineer'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+  roadmap({
+    id: 'robotics-engineer',
+    title: 'Robotics Engineer',
+    categoryId: 'engineering',
+    intro:
+      'Robotics engineers build systems that sense, decide, and act in the physical world. The work combines mechanics, electronics, control, and software, often with safety-critical constraints.',
+    duration: 'A four-year engineering degree after Class 12 is common, often in robotics, mechatronics, mechanical, electrical, or electronics engineering.',
+    stages: [
+      stage(
+        'Build mathematics, physics, and programming foundations',
+        'Develop mechanics, circuits, and coding skills. Small supervised robot kits or simulations are useful ways to connect the subjects.',
+        'Class 10 onward',
+        ['Mathematics', 'Physics', 'Programming'],
+      ),
+      stage(
+        'Complete Class 11–12 with MPC',
+        'Mathematics, Physics, and Chemistry support most relevant engineering routes. Computer science can add useful early programming experience.',
+        '2 years',
+        ['MPC', 'Programming basics', 'Mechanics'],
+      ),
+      stage(
+        'Complete a relevant engineering degree',
+        'Robotics, mechatronics, mechanical, electrical, electronics, or computer engineering can lead here. Choose a programme with hands-on labs and control or embedded systems content.',
+        '4 years',
+        ['Degree', 'Control systems', 'Embedded systems'],
+      ),
+      stage(
+        'Build an integrated robot or automation project',
+        'Combine sensing, actuation, control, and software in a safe project. Document interfaces, failure modes, testing, and safety limits.',
+        'During study',
+        ['Sensors', 'Actuators', 'ROS or embedded'],
+      ),
+      stage(
+        'Enter automation, manufacturing, or research',
+        'Work in industrial automation, autonomous systems, healthcare robotics, agriculture, or research. Specialist roles may require postgraduate study.',
+        'After graduation',
+        ['Automation', 'Robotics', 'Specialisation'],
+      ),
+    ],
+    subjects: ['Mathematics', 'Physics', 'Computer Science', 'Control systems', 'Electronics'],
+    exams: [
+      exam('JEE (Main)', 'One route into robotics or related engineering programmes; state tests and university admissions also exist.', SOURCES.jeeMain),
+      exam('State engineering entrance tests', 'Requirements and counselling vary by state.'),
+    ],
+    qualifications: [
+      'B.Tech/B.E. in robotics, mechatronics, mechanical, electrical, electronics, or computer engineering.',
+      'A postgraduate degree can support advanced research or specialist autonomy roles.',
+      'Safety and testing evidence matters for physical systems.',
+    ],
+    skills: ['Control systems', 'Embedded programming', 'Sensors and actuators', 'Systems integration', 'Safety testing'],
+    practical: [
+      'Build a supervised robot or automation prototype with clear safety limits.',
+      'Test failure modes such as sensor loss, power interruption, and unexpected obstacles.',
+      'Document interfaces between mechanical, electrical, and software parts.',
+    ],
+    licensing: ['No general professional licence is required. Safety-critical deployments may require employer or regulatory approvals.'],
+    entryRoutes: [
+      'Robotics or mechatronics degree with integrated projects.',
+      'Mechanical, electrical, electronics, or computer engineering followed by robotics specialisation.',
+      'Postgraduate research route for advanced autonomy and control.',
+    ],
+    alternatives: ['Mechanical Engineer', 'Electronics Engineer', 'AI Engineer', 'Automation Engineer'],
+    sources: [SOURCES.jeeMain, SOURCES.aicte],
+  }),
+]

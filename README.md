@@ -50,4 +50,3 @@ For deployment, deploy the frontend and backend separately. Set `VITE_AI_API_BAS
 ## Keep out of Git
 
 The root `.gitignore` excludes `.env` files, `node_modules`, generated `dist` output, logs, and local editor/OS files. Commit the `.env.example` templates, not `.env`. If an API key was ever committed or shared, revoke it at Groq and create a replacement; deleting the file in a later commit does not erase it from Git history.
-
