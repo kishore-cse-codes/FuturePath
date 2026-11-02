@@ -190,8 +190,7 @@ export default function RoadmapDetailPage() {
               {!detailed ? (
                 <p className="mt-4 flex items-start gap-2 rounded-xl border border-amber-300/15 bg-amber-300/[0.05] p-3 text-[10.5px] leading-5 text-amber-100/75">
                   <Info className="mt-0.5 h-3.5 w-3.5 flex-none" aria-hidden="true" />
-                  This career has an overview route built from its career profile. It does not yet
-                  have a fully detailed roadmap with exam and source lists.
+                  This career has an overview.
                 </p>
               ) : null}
             </div>
