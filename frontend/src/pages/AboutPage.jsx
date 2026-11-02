@@ -168,7 +168,7 @@ export default function AboutPage() {
 
                       <div className="mt-4 rounded-xl border border-white/8 bg-black/10 px-3 py-2.5">
                         <p className="text-[8.5px] font-semibold uppercase tracking-[0.16em] text-subtle">
-                          B.Tech specialization
+                          B.Tech in
                         </p>
                         <p className="mt-1 text-[10.5px] leading-5 text-white/80">
                           {member.specialization}
