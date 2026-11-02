@@ -46,8 +46,8 @@ export default function RoadmapTimeline({ stages, color, detailed }) {
             aria-label="Career roadmap stages"
           >
             {stages.map((stage, index) => (
-              <li key={stage.title} className="min-w-0">
-                <div className="relative mb-4 h-10">
+              <li key={stage.title} className="flex min-w-0 flex-col">
+                <div className="relative mb-4 h-10 flex-none">
                   <span
                     className="relative z-10 grid h-10 w-10 place-items-center rounded-full border font-display text-[10px] font-semibold shadow-[0_0_0_5px_#080e21]"
                     style={{
@@ -66,7 +66,7 @@ export default function RoadmapTimeline({ stages, color, detailed }) {
                     />
                   ) : null}
                 </div>
-                <div className="h-full rounded-[1.35rem] border border-white/10 bg-[linear-gradient(155deg,rgba(255,255,255,0.055),rgba(255,255,255,0.018))] p-4">
+                <div className="min-h-0 flex-1 rounded-[1.35rem] border border-white/10 bg-[linear-gradient(155deg,rgba(255,255,255,0.055),rgba(255,255,255,0.018))] p-4">
                   <StageDetails stage={stage} color={color} />
                 </div>
               </li>
