@@ -1,22 +1,24 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollManager from './components/ScrollManager'
-import CareerDetailModal from './components/CareerDetailModal'
 import ComingSoonModal from './components/ComingSoonModal'
-import HomePage from './pages/HomePage'
-import CareerDiscoveryPage from './pages/CareerDiscoveryPage'
-import CareerDetailPage from './pages/CareerDetailPage'
-import RoadmapsPage from './pages/RoadmapsPage'
-import RoadmapDetailPage from './pages/RoadmapDetailPage'
-import StreamComparePage from './pages/StreamComparePage'
-import ExamsCollegesPage from './pages/ExamsCollegesPage'
-import AICounsellorPage from './pages/AICounsellorPage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
-import NotFoundPage from './pages/NotFoundPage'
 import AppProvider from './context/AppProvider'
 import { useApp } from './context/AppContext'
+
+const HomePage = lazy(() => import('./pages/HomePage'))
+const CareerDiscoveryPage = lazy(() => import('./pages/CareerDiscoveryPage'))
+const CareerDetailPage = lazy(() => import('./pages/CareerDetailPage'))
+const RoadmapsPage = lazy(() => import('./pages/RoadmapsPage'))
+const RoadmapDetailPage = lazy(() => import('./pages/RoadmapDetailPage'))
+const StreamComparePage = lazy(() => import('./pages/StreamComparePage'))
+const ExamsCollegesPage = lazy(() => import('./pages/ExamsCollegesPage'))
+const AICounsellorPage = lazy(() => import('./pages/AICounsellorPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
+const ContactPage = lazy(() => import('./pages/ContactPage'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+const CareerDetailModal = lazy(() => import('./components/CareerDetailModal'))
 
 function AppShell() {
   const { selectedCareer, comingSoon, closeCareer, closeComingSoon } = useApp()
@@ -38,23 +40,29 @@ function AppShell() {
 
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/careers" element={<CareerDiscoveryPage />} />
-        <Route path="/careers/:careerId" element={<CareerDetailPage />} />
-        <Route path="/roadmaps" element={<RoadmapsPage />} />
-        <Route path="/roadmaps/:careerId" element={<RoadmapDetailPage />} />
-        <Route path="/compare" element={<StreamComparePage />} />
-        <Route path="/exams-colleges" element={<ExamsCollegesPage />} />
-        <Route path="/ai-counsellor" element={<AICounsellorPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<main className="relative z-10 p-8 text-center text-muted" role="status">Loading page…</main>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/careers" element={<CareerDiscoveryPage />} />
+          <Route path="/careers/:careerId" element={<CareerDetailPage />} />
+          <Route path="/roadmaps" element={<RoadmapsPage />} />
+          <Route path="/roadmaps/:careerId" element={<RoadmapDetailPage />} />
+          <Route path="/compare" element={<StreamComparePage />} />
+          <Route path="/exams-colleges" element={<ExamsCollegesPage />} />
+          <Route path="/ai-counsellor" element={<AICounsellorPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
 
       <Footer />
 
-      <CareerDetailModal career={selectedCareer} onClose={closeCareer} />
+      {selectedCareer ? (
+        <Suspense fallback={null}>
+          <CareerDetailModal career={selectedCareer} onClose={closeCareer} />
+        </Suspense>
+      ) : null}
       <ComingSoonModal content={comingSoon} onClose={closeComingSoon} />
     </div>
   )
@@ -70,3 +78,4 @@ export default function App() {
     </BrowserRouter>
   )
 }
+
