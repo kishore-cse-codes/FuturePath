@@ -12,8 +12,8 @@ export default function Hero({ onSelectCareer, onDiscoverPath }) {
         <div className="absolute left-[56%] top-24 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(124,108,255,0.11),transparent_68%)]" />
       </div>
 
-      <div className="page-shell relative z-10 grid items-center gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 xl:gap-14">
-        <div className="animate-rise max-w-xl">
+      <div className="page-shell relative z-10 grid min-w-0 grid-cols-1 items-center gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 xl:gap-14">
+        <div className="animate-rise min-w-0 max-w-xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-[10px] font-semibold tracking-[0.22em] text-brand-soft backdrop-blur-md">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-soft shadow-[0_0_10px_rgba(179,167,255,0.8)]" />
             YOUR FUTURE STARTS HERE
@@ -55,7 +55,7 @@ export default function Hero({ onSelectCareer, onDiscoverPath }) {
         </div>
 
         <div
-          className="animate-rise relative mx-auto w-full max-w-[500px] lg:ml-auto"
+          className="animate-rise relative mx-auto w-full min-w-0 max-w-[500px] lg:ml-auto"
           style={{ animationDelay: '120ms' }}
         >
           <div className="pointer-events-none absolute inset-0" aria-hidden="true">

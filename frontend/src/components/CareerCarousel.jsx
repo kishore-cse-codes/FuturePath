@@ -94,7 +94,7 @@ export default function CareerCarousel({ careers = CAROUSEL_CAREERS }) {
 
   return (
     <section
-      className="glass relative overflow-hidden rounded-[1.9rem] p-4 sm:p-5"
+      className="glass relative w-full min-w-0 max-w-full overflow-hidden rounded-[1.9rem] p-4 sm:p-5"
       aria-roledescription="carousel"
       aria-label="Featured career pathways"
       tabIndex={0}
@@ -170,7 +170,7 @@ export default function CareerCarousel({ careers = CAROUSEL_CAREERS }) {
                 aria-label={`${slideIndex + 1} of ${count}: ${career.name}`}
                 aria-hidden={!isActive}
                 inert={!isActive}
-                className="flex min-h-[30rem] w-full flex-none flex-col p-4 sm:min-h-[30.5rem] sm:p-5"
+                className="flex min-h-[30rem] w-full min-w-0 flex-none flex-col p-4 sm:min-h-[30.5rem] sm:p-5"
               >
                 <div className="flex items-start gap-3">
                   <span
@@ -237,9 +237,9 @@ export default function CareerCarousel({ careers = CAROUSEL_CAREERS }) {
                   </ol>
                 </div>
 
-                <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-white/8 pt-4">
+                <div className="mt-auto flex min-w-0 flex-wrap items-center justify-between gap-2 border-t border-white/8 pt-4">
                   <span className="text-[10.5px] text-subtle">One of many possible paths</span>
-                  <div className="flex items-center gap-3">
+                  <div className="flex min-w-0 flex-wrap items-center gap-3">
                     <Link
                       to={getRoadmapPath(career.id)}
                       tabIndex={isActive ? 0 : -1}
